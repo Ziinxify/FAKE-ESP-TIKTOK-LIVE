@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Red Box</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
+            background: transparent;
+        }
+
+        #redBox {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            animation: moveBox 20s infinite linear;
+        }
+
+        @keyframes moveBox {
+            0% { left: 0; bottom: 0; }
+            25% { left: calc(50% - 50px); bottom: 0; }
+            50% { left: calc(100% - 100px); bottom: 0; }
+            75% { left: calc(50% - 50px); bottom: 50px; }
+            100% { left: 0; bottom: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div id="redBox"></div>
+</body>
+</html>
